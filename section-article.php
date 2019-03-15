@@ -1,3 +1,21 @@
+<style>
+    .container .posts .posts-container #content{
+        width: 70%;
+        display: inline-block;
+    }
+    .content-right-sidebar{
+        width: 30%;
+        display: inline-block;
+        float: right;
+        margin-top: 73px;
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+    article .entry-content{
+        width: 100%;
+        max-width: 800px;
+    }
+</style>
   <div class="posts">
      
         
@@ -44,6 +62,20 @@
       <?php else : ?>
       <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
       <?php endif; ?>
+
+      </div>
+      <div class="content-right-sidebar">
+          <img src="http://u506.black.elastictech.org/mosh/img-1.png" style="border-radius: 10px; max-width: 100%; display: block; margin: 0px auto;">
+          <?php get_search_form(); ?>
+          <?php wp_list_categories(); ?>
+
+          <h3>Popular Posts</h3>
+          <ul>
+              <?php $popular = new WP_Query(array('posts_per_page'=>7, 'meta_key'=>'popular_posts', 'orderby'=>'meta_value_num', 'order'=>'DESC'));
+              while ($popular->have_posts()) : $popular->the_post(); ?>
+                  <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+              <?php endwhile; wp_reset_postdata(); ?>
+          </ul>
 
       </div>
     </div><!-- .posts-container --> 
