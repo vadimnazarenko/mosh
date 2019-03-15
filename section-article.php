@@ -20,7 +20,7 @@
           <h1 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
           
 	
-           		 <?php the_content("Read On");?>
+           		 <?php the_excerpt();?>
 
    <?php the_tags(); ?>
           
