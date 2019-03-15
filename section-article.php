@@ -18,9 +18,14 @@
           </div>
 
           <h1 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-          
-	
-           		 <?php the_excerpt();?>
+
+
+           		 <?php if ( is_home() || is_category() || is_archive() || is_front_page() || is_search() || is_tag() ) {
+                     the_excerpt();
+                 }
+                 else {
+                     the_content();
+                 }?>
 
    <?php the_tags(); ?>
           
