@@ -15,6 +15,34 @@
         width: 100%;
         max-width: 800px;
     }
+    .categories{
+        list-style: none;
+        font-family: 'Museo Sans W01', helvetica, arial, sans-serif;
+        font-size: 1.5em;
+        font-weight: 800;
+        color: #1D1B1B;
+        line-height: 1.2em;
+        text-align: left;
+    }
+    .categories .cat-item{
+        list-style: none;
+    }
+    .categories .cat-item a{
+        display: block;
+        font-size: 16px;
+        color: #60656f;
+        border-bottom: 1px solid #f1f5fc;
+        padding: 11px 0;
+        line-height: 20px;
+        font-family: 'open sans', helvetica, sans-serif;
+        font-weight: 400;
+    }
+    .categories .cat-item:hover a{
+        color: #0d82df;
+    }
+    .categories ul{
+        padding-left: 0;
+    }
 </style>
   <div class="posts">
      
