@@ -15,7 +15,7 @@
         width: 100%;
         max-width: 800px;
     }
-    .categories{
+    .categories, .general-list{
         list-style: none;
         font-family: 'Museo Sans W01', helvetica, arial, sans-serif;
         font-size: 1.5em;
@@ -24,10 +24,10 @@
         line-height: 1.2em;
         text-align: left;
     }
-    .categories .cat-item{
+    .categories .cat-item, .general-list li{
         list-style: none;
     }
-    .categories .cat-item a{
+    .categories .cat-item a, .general-list li a{
         display: block;
         font-size: 16px;
         color: #60656f;
@@ -37,10 +37,10 @@
         font-family: 'open sans', helvetica, sans-serif;
         font-weight: 400;
     }
-    .categories .cat-item:hover a{
+    .categories .cat-item:hover a, .general-list li:hover a{
         color: #0d82df;
     }
-    .categories ul{
+    .categories ul, ul.general-list{
         padding-left: 0;
     }
 </style>
@@ -98,7 +98,7 @@
           <?php wp_list_categories(); ?>
 
           <h3>Popular Posts</h3>
-          <ul>
+          <ul class="general-list">
               <?php $popular = new WP_Query(array('posts_per_page'=>7, 'meta_key'=>'popular_posts', 'orderby'=>'meta_value_num', 'order'=>'DESC'));
               while ($popular->have_posts()) : $popular->the_post(); ?>
                   <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
