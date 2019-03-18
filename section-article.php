@@ -23,6 +23,7 @@
         color: #1D1B1B;
         line-height: 1.2em;
         text-align: left;
+        margin-bottom: 20px;
     }
     .categories .cat-item, .general-list li{
         list-style: none;
@@ -42,6 +43,14 @@
     }
     .categories ul, ul.general-list{
         padding-left: 0;
+    }
+    @media screen and (max-width: 1000px){
+        .content-right-sidebar{
+            display: none;
+        }
+        .container .posts .posts-container #content {
+            width: 100%;
+        }
     }
 </style>
   <div class="posts">
