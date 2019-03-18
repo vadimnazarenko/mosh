@@ -104,7 +104,7 @@
                   <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
               <?php endwhile; wp_reset_postdata(); ?>
           </ul>
-          <?php load_template('link-to-social.php'); ?>
+          <?php load_template(locate_template('link-to-social.php')); ?>
 
       </div>
     </div><!-- .posts-container --> 
