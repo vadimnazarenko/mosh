@@ -45,7 +45,7 @@ body{
 	border-radius: 9px;
 	overflow: hidden;
 }
-.one-card p{
+.cards-list p{
 	display: none;
 }
 @media screen and (max-width: 992px){
